@@ -20,8 +20,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('employee', [App\Http\Controllers\employeecontroller::class, 'index']);
     Route::get('employee', [\App\Http\Controllers\employeecontroller::class, 'index']);
-   // Route::('employee/create', [App\Http\Controllers\employeecontroller::class, 'create']);
-    //Route::('employee', [App\Http\Controllers\employeecontroller::class, 'store']);
+    Route::get('employee/create', [App\Http\Controllers\employeecontroller::class, 'create']);
+    Route::post('employee', [App\Http\Controllers\employeecontroller::class, 'store']);
 
 
 
